@@ -1,16 +1,16 @@
-let fizzChallenge = () => {
-  for (i = 1; i <= 100; i++) {
-    if (i % 15 === 0) {
-      console.log("fizzbuzz");
-    }
-    if (i % 3 === 0) {
-      console.log("fizz");
-    }
-    if (i % 5 === 0) {
-      console.log("buzz");
-    } else {
-      console.log(i);
-    }
+const getPalindrome = (word) => {
+  const myArr = [];
+  let Rword = "";
+
+  for (let i = 0; i < word.length; i++) {
+    myArr.push(word[i]);
   }
+  for (let i = 0; i < word.length; i++) {
+    Rword = Rword + myArr.pop();
+  }
+  return word === Rword ? true : false;
 };
-fizzChallenge();
+
+console.log(getPalindrome("madam"));
+
+document.write(getPalindrome("madam"));
